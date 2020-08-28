@@ -1,0 +1,222 @@
+{
+    "failed": false,
+    "failure_reason": "",
+    "links": [
+        {
+            "link": "/",
+            "url": "https://www.website.com",
+            "domain": "www.website.com",
+            "label": "label",
+            "full_link": "https://www.website.com/",
+            "link_class_name": "",
+            "link_text": ""
+        },
+        {
+            "link": "/test-sites/e-commerce/static",
+            "url": "https://www.website.com",
+            "domain": "www.website.com",
+            "label": "label",
+            "full_link": "https://www.website.com/test-sites/e-commerce/static",
+            "link_class_name": "",
+            "link_text": "home"
+        },
+        {
+            "link": "/test-sites/e-commerce/static/computers",
+            "url": "https://www.website.com",
+            "domain": "www.website.com",
+            "label": "label",
+            "full_link": "https://www.website.com/test-sites/e-commerce/static/computers",
+            "link_class_name": "",
+            "link_text": "computers"
+        },
+        {
+            "link": "/test-sites/e-commerce/static/phones",
+            "url": "https://www.website.com",
+            "domain": "www.website.com",
+            "label": "label",
+            "full_link": "https://www.website.com/test-sites/e-commerce/static/phones",
+            "link_class_name": "",
+            "link_text": "phones"
+        },
+        {
+            "link": "/test-sites/e-commerce/static/product/632",
+            "url": "https://www.website.com",
+            "domain": "www.website.com",
+            "label": "label",
+            "full_link": "https://www.website.com/test-sites/e-commerce/static/product/632",
+            "link_class_name": "",
+            "link_text": "asus rog strix g..."
+        },
+        {
+            "link": "/test-sites/e-commerce/static/product/539",
+            "url": "https://www.website.com",
+            "domain": "www.website.com",
+            "label": "label",
+            "full_link": "https://www.website.com/test-sites/e-commerce/static/product/539",
+            "link_class_name": "",
+            "link_text": "lenovo thinkpad..."
+        },
+        {
+            "link": "/test-sites/e-commerce/static/product/580",
+            "url": "https://www.website.com",
+            "domain": "www.website.com",
+            "label": "label",
+            "full_link": "https://www.website.com/test-sites/e-commerce/static/product/580",
+            "link_class_name": "",
+            "link_text": "dell inspiron 15..."
+        },
+        {
+            "link": "/",
+            "url": "https://www.website.com",
+            "domain": "www.website.com",
+            "label": "label",
+            "full_link": "https://www.website.com/",
+            "link_class_name": "",
+            "link_text": "web scraper browser extension"
+        },
+        {
+            "link": "/pricing",
+            "url": "https://www.website.com",
+            "domain": "www.website.com",
+            "label": "label",
+            "full_link": "https://www.website.com/pricing",
+            "link_class_name": "",
+            "link_text": "web scraper cloud"
+        },
+        {
+            "link": "/contact",
+            "url": "https://www.website.com",
+            "domain": "www.website.com",
+            "label": "label",
+            "full_link": "https://www.website.com/contact",
+            "link_class_name": "",
+            "link_text": "contact"
+        },
+        {
+            "link": "/privacy-policy",
+            "url": "https://www.website.com",
+            "domain": "www.website.com",
+            "label": "label",
+            "full_link": "https://www.website.com/privacy-policy",
+            "link_class_name": "",
+            "link_text": "website privacy policy"
+        },
+        {
+            "link": "/extension-privacy-policy",
+            "url": "https://www.website.com",
+            "domain": "www.website.com",
+            "label": "label",
+            "full_link": "https://www.website.com/extension-privacy-policy",
+            "link_class_name": "",
+            "link_text": "browser extension privacy policy"
+        },
+        {
+            "link": "http://webscraperio.us-east-1.elasticbeanstalk.com/downloads/Web_Scraper_Media_Kit.zip",
+            "url": "https://www.website.com",
+            "domain": "www.website.com",
+            "label": "label",
+            "full_link": "http://webscraperio.us-east-1.elasticbeanstalk.com/downloads/Web_Scraper_Media_Kit.zip",
+            "link_class_name": "",
+            "link_text": "media kit"
+        },
+        {
+            "link": "/jobs",
+            "url": "https://www.website.com",
+            "domain": "www.website.com",
+            "label": "label",
+            "full_link": "https://www.website.com/jobs",
+            "link_class_name": "",
+            "link_text": "jobs"
+        },
+        {
+            "link": "/blog",
+            "url": "https://www.website.com",
+            "domain": "www.website.com",
+            "label": "label",
+            "full_link": "https://www.website.com/blog",
+            "link_class_name": "",
+            "link_text": "blog"
+        },
+        {
+            "link": "/documentation",
+            "url": "https://www.website.com",
+            "domain": "www.website.com",
+            "label": "label",
+            "full_link": "https://www.website.com/documentation",
+            "link_class_name": "",
+            "link_text": "documentation"
+        },
+        {
+            "link": "/tutorials",
+            "url": "https://www.website.com",
+            "domain": "www.website.com",
+            "label": "label",
+            "full_link": "https://www.website.com/tutorials",
+            "link_class_name": "",
+            "link_text": "video tutorials"
+        },
+        {
+            "link": "/screenshots",
+            "url": "https://www.website.com",
+            "domain": "www.website.com",
+            "label": "label",
+            "full_link": "https://www.website.com/screenshots",
+            "link_class_name": "",
+            "link_text": "screenshots"
+        },
+        {
+            "link": "/test-sites",
+            "url": "https://www.website.com",
+            "domain": "www.website.com",
+            "label": "label",
+            "full_link": "https://www.website.com/test-sites",
+            "link_class_name": "",
+            "link_text": "test sites"
+        },
+        {
+            "link": "https://forum.webscraper.io/",
+            "url": "https://www.website.com",
+            "domain": "www.website.com",
+            "label": "label",
+            "full_link": "https://forum.webscraper.io/",
+            "link_class_name": "",
+            "link_text": "forum"
+        },
+        {
+            "link": "mailto:info@webscraper.io",
+            "url": "https://www.website.com",
+            "domain": "www.website.com",
+            "label": "label",
+            "full_link": "mailto:info@webscraper.io",
+            "link_class_name": "",
+            "link_text": "info@webscraper.io"
+        },
+        {
+            "link": "https://www.facebook.com/webscraperio/",
+            "url": "https://www.website.com",
+            "domain": "www.website.com",
+            "label": "label",
+            "full_link": "https://www.facebook.com/webscraperio/",
+            "link_class_name": "",
+            "link_text": ""
+        },
+        {
+            "link": "https://twitter.com/webscraperio",
+            "url": "https://www.website.com",
+            "domain": "www.website.com",
+            "label": "label",
+            "full_link": "https://twitter.com/webscraperio",
+            "link_class_name": "",
+            "link_text": ""
+        },
+        {
+            "link": "#",
+            "url": "https://www.website.com",
+            "domain": "www.website.com",
+            "label": "label",
+            "full_link": "https://www.website.com",
+            "link_class_name": "",
+            "link_text": "web scraper"
+        }
+    ]
+}

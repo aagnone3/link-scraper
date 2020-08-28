@@ -1,0 +1,7 @@
+url,label,include_nav_links
+https://google.com,Google,false
+https://cnn.com,CNN,False
+https://wikipedia.com,Wiki,0
+https://espn.com,ESPN,True
+https://abc.com,ABC,true
+https://fox.com,Fox,1

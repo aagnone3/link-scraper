@@ -1,0 +1,8 @@
+# Working directory for the application inside the container
+WORKING_DIRECTORY=/opt
+
+# Docker username
+DOCKER_USERNAME=aagnone
+
+# Name of repository to create in Docker Hub
+DOCKER_REPO=get-links
