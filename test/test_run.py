@@ -127,10 +127,10 @@ def test_process_page(page_xml_tree, processed_page_records):
         'include_nav_links': False
     })
     result = run.parse_page_links(row, page_xml_tree)
-    # import pdb; pdb.set_trace()
-    with open('test/fixtures/processed_page.json', 'w') as fp:
-        import json
-        json.dump(result, fp, indent=4)
+    # use the lines below to re-generate a target test fixture when needed
+    # with open('test/fixtures/processed_page.json', 'w') as fp:
+    #     import json
+    #     json.dump(result, fp, indent=4)
     assert result == processed_page_records
 
 
