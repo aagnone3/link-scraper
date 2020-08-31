@@ -66,6 +66,8 @@ def process_item(row: pd.Series, browser: WebDriver) -> dict:
         fail = response.status_code >= 400
         if not fail:
             browser.get(row['url'])
+            import time
+            time.sleep(3)
     except Exception:
         import traceback
         log.warning(f"Error navigating to url {row['url']}.")
@@ -158,7 +160,7 @@ def make_element_ids(df: pd.DataFrame) -> str:
         lambda row: f"{row['domain']}_{row['full_link']}",
         axis=1
     )
-# form a unique id by the ordering inwhich each item occurs in the pageq2""" ÇÇÇ """
+    # form a unique id by the ordering inwhich each item occurs in the pageq2""" ÇÇÇ """
     df['id'] = ''
     for pre_id, group in df.groupby('pre_id'):
         df.loc[group.index, 'id'] = [f"{pre_id}{number}" for number in range(len(group))]
@@ -184,6 +186,7 @@ def find_new_links(cur_links: pd.DataFrame, all_links: pd.DataFrame) -> List[pd.
 
     # if both are empty, both are empty :)
     if no_cur_links and no_all_links:
+        log.info('No current or previous links.')
         return (
             pd.DataFrame([], columns=constants.NEW_LINKS_FILE_HEADER),
             pd.DataFrame([], columns=constants.ALL_LINKS_FILE_HEADER)
@@ -191,6 +194,7 @@ def find_new_links(cur_links: pd.DataFrame, all_links: pd.DataFrame) -> List[pd.
 
     # if no previous links, all current links are new
     if no_all_links:
+        log.info('No previous links to merge with.')
         all_links = clean(cur_links, constants.ALL_LINKS_FILE_HEADER)
         cur_links['defined_change'] = 'new link'
         return (
@@ -200,6 +204,7 @@ def find_new_links(cur_links: pd.DataFrame, all_links: pd.DataFrame) -> List[pd.
 
     # if no current links, nothing is new
     if no_cur_links:
+        log.info('No new links to consider.')
         return pd.DataFrame([], columns=constants.NEW_LINKS_FILE_HEADER), all_links
 
     # otherwise, parse current links to reconcile new ones
@@ -225,12 +230,12 @@ def find_new_links(cur_links: pd.DataFrame, all_links: pd.DataFrame) -> List[pd.
                 item = dict(row)
                 item['defined_change'] = 'text change'
                 changes.append(item)
-                log.info(item)
                 log.info(f"Link {row['id']} changed text from {existing_link['link_text']} to {row['link_text']}.")
                 all_links.loc[index, 'link_text'] = row['link_text']
 
     new_links = pd.DataFrame(new_links)
-    changes = pd.DataFrame(changes).append(new_links)
+    changes = pd.DataFrame(changes, columns=constants.NEW_LINKS_FILE_HEADER).append(new_links)
+    log.info(f'{len(changes)} changes detected.')
 
     all_links = all_links.append(new_links)
 
