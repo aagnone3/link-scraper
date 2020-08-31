@@ -215,7 +215,7 @@ def find_new_links(cur_links: pd.DataFrame, all_links: pd.DataFrame) -> List[pd.
         existing_link = all_links.loc[all_links['id'] == row['id']]
         if len(existing_link) == 0:
             # link is new
-            item = dict(row)
+            item = row.to_dict()
             item['defined_change'] = 'new link'
             new_links.append(item)
         elif len(existing_link) > 1:
@@ -227,13 +227,23 @@ def find_new_links(cur_links: pd.DataFrame, all_links: pd.DataFrame) -> List[pd.
 
             if row['link_text'] != existing_link['link_text']:
                 # text has changed for same link
-                item = dict(row)
+                item = row.to_dict()
                 item['defined_change'] = 'text change'
                 changes.append(item)
                 log.info(f"Link {row['id']} changed text from {existing_link['link_text']} to {row['link_text']}.")
                 all_links.loc[index, 'link_text'] = row['link_text']
 
-    new_links = pd.DataFrame(new_links)
+    removed_link_ids = list(set(all_links['id']) - set(cur_links['id']))
+    if len(removed_link_ids) > 0:
+        for _id in removed_link_ids:
+            log.info(f'Link {_id} removed.')
+            index = all_links.index[all_links['id'] == _id]
+            item = all_links.loc[index].to_dict(orient='records')[0]
+            item['defined_change'] = 'removed link'
+            changes.append(item)
+            all_links.drop(index, inplace=True)
+
+    new_links = pd.DataFrame(new_links, columns=constants.NEW_LINKS_FILE_HEADER)
     changes = pd.DataFrame(changes, columns=constants.NEW_LINKS_FILE_HEADER).append(new_links)
     log.info(f'{len(changes)} changes detected.')
 
